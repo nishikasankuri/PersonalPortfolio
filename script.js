@@ -28,3 +28,17 @@ document.querySelectorAll('.view-more').forEach(button => {
         }
     });
 });
+// Volunteering Section - Toggle Detailed Description
+document.querySelectorAll('.view-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const volunteeringItem = button.closest('.volunteering-item');
+        volunteeringItem.classList.toggle('active');
+
+        // Change button text
+        if (volunteeringItem.classList.contains('active')) {
+            button.textContent = 'View Less';
+        } else {
+            button.textContent = 'View More';
+        }
+    });
+});
